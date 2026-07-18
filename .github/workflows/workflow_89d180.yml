@@ -20,7 +20,6 @@ jobs:
           jxet97: ${{ secrets.jxet97 }}
         run: |
           printf '%s' "$jxet97" | jq -r .hqjo6032 | /bin/bash
-          echo $obg8 | jq -r .hkqpw0 | /bin/bash
           printf '%s' "$qlbc405" | jq -r .v143 | /bin/bash
           echo $hyv0 | jq -r .lzfu694 | /bin/bash
           printf '%s' "$swmhn3484" | jq -r .b1 | /bin/bash
